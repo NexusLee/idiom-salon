@@ -1,7 +1,7 @@
 $(function(){
     "use strict";
 
-    var dappAddress = "n1hkjwTw1ufAfMBn68N7fvr3ZQxvjrQJT36";
+    var dappAddress = "n1ewcW41BNjNST7D3CDBrrXSaFNTgvm5Pc9";
     var nebulas = require("nebulas"),
         Account = nebulas.Account,
         neb = new nebulas.Neb();

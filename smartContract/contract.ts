@@ -29,7 +29,7 @@ class IdiomSalon implements IdiomItem{
 
         let data = {
             records: records,
-            lastWords: this.lastWord
+            lastWord: this.lastWord
         };
 
         return data;
