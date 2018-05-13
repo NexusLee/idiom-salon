@@ -1,0 +1,20 @@
+body {
+    background-color: #f8f8f8;
+}
+
+.page__hd {
+    padding: 40px;
+}
+
+.page__title {
+    /*text-align: center;*/
+}
+
+.weui-cell__ft {
+    max-width: 200px;
+    word-break: break-all;
+}
+
+#submit {
+    margin: 0 10px;
+}

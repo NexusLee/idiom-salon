@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="css/weui.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+</head>
+<body>
+<!-- loading toast -->
+<div id="loadingToast" style="display:none;">
+    <div class="weui-mask_transparent"></div>
+    <div class="weui-toast">
+        <i class="weui-loading weui-icon_toast"></i>
+        <p class="weui-toast__content">数据加载中</p>
+    </div>
+</div>
+<div class="page__hd">
+    <h1 class="page__title">
+        成语接龙
+    </h1>
+    <p class="page__desc">成语接龙顺接玩法介绍：下一个成语的字头接上一个成语的字尾 例如：快心满意 → 意到笔随。。</p>
+</div><!-- 列表组顶部说明文字 -->
+<!-- 带说明的列表 -->
+<div class="weui-cells__title">接龙列表</div>
+<div id="list" class="weui-cells">
+    <!--<div class="weui-cell">
+        <div class="weui-cell__bd">
+            <p>和风细雨</p>
+        </div>
+        <div class="weui-cell__ft">说明文字</div>
+    </div>-->
+</div>
+<div class="weui-cells">
+    <div class="weui-cell">
+        <div class="weui-cell__bd">
+            <input id="idiom" class="weui-input" type="text" placeholder="请输入成语"  maxlength="4"/>
+        </div>
+    </div>
+</div>
+<br />
+<a id="submit" href="javascript:;" class="weui-btn weui-btn_primary">我要接龙</a>
+
+<script src="lib/jquery-3.3.1.min.js" type="application/javascript"></script>
+<script src="lib/nebulas.js" type="application/javascript"></script>
+<script src="lib/nebPay.js" type="application/javascript"></script>
+<script src="js/index.js" type="application/javascript"></script>
+</body>
+</html>
