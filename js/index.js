@@ -38,13 +38,26 @@ $(function(){
 
         serialNumber = nebPay.call(to, value, callFunction, callArgs, {    //使用nebpay的call接口去调用合约,
             listener: function(resp){
-                console.log(resp)
+                console.log(resp);
+                if(resp.txhash){
+                    var from = Account.NewAccount().getAddressString();
+
+                    var html = '<div class="weui-cell">'+
+                        '<div class="weui-cell__bd">'+
+                        '<p>' + idiom.value + '</p>'+
+                        '</div>'+
+                        '<div class="weui-cell__ft">' + from + '</div>'+
+                        '</div>';
+                    list.innerHTML += html;
+                    lastWord = idiom.value.substring(idiom.value.length - 1, idiom.value.length);
+
+                }
             }        //设置listener, 处理交易返回信息
         });
 
-        intervalQuery = setInterval(function () {
+        /*intervalQuery = setInterval(function () {
             funcIntervalQuery();
-        }, 5000);
+        }, 5000);*/
     });
 
     function funcIntervalQuery() {
@@ -91,6 +104,9 @@ $(function(){
             var result = JSON.parse(resp.result);
             len = result.records.length;
             lastWord = result.lastWord === undefined ? '' : result.lastWord;
+            if(result.records.length > 10) {
+                result.records = result.records.slice(-10);
+            }
             result.records.map(function(item, index){
                 html += '<div class="weui-cell">'+
                     '<div class="weui-cell__bd">'+
