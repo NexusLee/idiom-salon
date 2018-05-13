@@ -5,7 +5,7 @@ $(function(){
     var nebulas = require("nebulas"),
         Account = nebulas.Account,
         neb = new nebulas.Neb();
-    neb.setRequest(new nebulas.HttpRequest("https://mainnet.nebulas.io"));
+    neb.setRequest(new nebulas.HttpRequest("https://testnet.nebulas.io"));
 
     var NebPay = require("nebpay");
     var nebPay = new NebPay();
