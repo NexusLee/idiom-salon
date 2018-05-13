@@ -1,11 +1,11 @@
 $(function(){
     "use strict";
 
-    var dappAddress = "n1ewcW41BNjNST7D3CDBrrXSaFNTgvm5Pc9";
+    var dappAddress = "n1oqG6k2JhRdv5KjqjjYZNnnRUdWQqWSUDt";
     var nebulas = require("nebulas"),
         Account = nebulas.Account,
         neb = new nebulas.Neb();
-    neb.setRequest(new nebulas.HttpRequest("https://testnet.nebulas.io"));
+    neb.setRequest(new nebulas.HttpRequest("https://mainnet.nebulas.io"));
 
     var NebPay = require("nebpay");
     var nebPay = new NebPay();
